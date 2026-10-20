@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | ZenDrive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+  .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .story-img { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+  .story-img img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/5; }
+  .story-text h2 { font-size: clamp(26px, 3vw, 36px); margin-bottom: 20px; color: var(--forest); }
+  .story-text p { font-size: 15px; color: var(--text-mid); line-height: 1.8; margin-bottom: 16px; }
+  @media (max-width: 768px) { .story-grid { grid-template-columns: 1fr; gap: 32px; } .story-img { order: -1; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><div class="logo-mark"><i class="fas fa-gem"></i></div><div class="logo-text">ZenDrive<small>Premium Rentals</small></div></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fleet.html">Our Fleet</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:0112345678" class="header-phone"><i class="fas fa-phone"></i><span>011 234 5678</span></a>
+      <a href="fleet.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Now</a>
+      <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-top">
+    <a href="index.html" class="logo" onclick="closeMobile()"><div class="logo-mark"><i class="fas fa-gem"></i></div><div class="logo-text">ZenDrive<small>Premium Rentals</small></div></a>
+    <button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button>
+  </div>
+  <nav class="mobile-nav">
+    <a href="index.html" onclick="closeMobile()">Home</a>
+    <a href="fleet.html" onclick="closeMobile()">Our Fleet</a>
+    <a href="about.html" onclick="closeMobile()">About Us</a>
+    <a href="contact.html" onclick="closeMobile()">Contact</a>
+  </nav>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>About ZenDrive</h1>
+    <p>Sri Lanka's trusted car rental partner. Driven by quality, powered by service.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-img reveal">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800" alt="Our Team">
+      </div>
+      <div class="story-text reveal">
+        <div class="section-tag">Our Story</div>
+        <h2>Years of Trust, Quality & Service</h2>
+        <p>ZenDrive was founded with a simple mission: to offer Sri Lankans a <strong>premium car rental experience</strong> at fair prices, with transparent terms and zero hidden fees.</p>
+        <p>Starting from a small office in Colombo, we've grown to become one of Sri Lanka's most trusted mobility partners. Today we operate <strong>multiple convenient locations</strong>, maintain a fleet of premium vehicles, and serve thousands of happy customers each year.</p>
+        <p>Whether you need a compact car for the city, an SUV for a family trip, or a luxury vehicle for a special occasion, we have the right car — and the right service — for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--forest); color: var(--cream); padding: 80px 0;">
+  <div class="container">
+    <div class="section-head center">
+      <div class="section-tag" style="color: var(--gold-light);">Our Values</div>
+      <h2 style="color: var(--cream);">What We Stand For</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+      <div style="padding: 32px; background: rgba(253,251,247,0.04); border-radius: var(--radius); text-align: center;">
+        <div style="color: var(--gold); font-size: 32px; margin-bottom: 16px;"><i class="fas fa-shield-alt"></i></div>
+        <h3 style="color: var(--cream); font-size: 20px; margin-bottom: 8px;">Safety First</h3>
+        <p style="color: rgba(253,251,247,0.6); font-size: 14px;">Every vehicle undergoes a comprehensive 50-point inspection before every rental.</p>
+      </div>
+      <div style="padding: 32px; background: rgba(253,251,247,0.04); border-radius: var(--radius); text-align: center;">
+        <div style="color: var(--gold); font-size: 32px; margin-bottom: 16px;"><i class="fas fa-handshake"></i></div>
+        <h3 style="color: var(--cream); font-size: 20px; margin-bottom: 8px;">Trust & Transparency</h3>
+        <p style="color: rgba(253,251,247,0.6); font-size: 14px;">No hidden fees. The price you see is the price you pay. Every time.</p>
+      </div>
+      <div style="padding: 32px; background: rgba(253,251,247,0.04); border-radius: var(--radius); text-align: center;">
+        <div style="color: var(--gold); font-size: 32px; margin-bottom: 16px;"><i class="fas fa-star"></i></div>
+        <h3 style="color: var(--cream); font-size: 20px; margin-bottom: 8px;">Premium Quality</h3>
+        <p style="color: rgba(253,251,247,0.6); font-size: 14px;">Our fleet is regularly serviced, cleaned, and upgraded to ensure you drive the best.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><div class="logo-mark"><i class="fas fa-gem"></i></div><div class="logo-text">ZenDrive<small>Premium Rentals</small></div></a>
+        <p>Colombo's most trusted premium car rental service.</p>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="fleet.html">Our Fleet</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul><li><a href="#">FAQ</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Privacy Policy</a></li></ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Get in Touch</h4>
+        <div class="fc-item"><i class="fas fa-map-marker-alt"></i><span>42, Independence Avenue, Colombo 07</span></div>
+        <div class="fc-item"><i class="fas fa-phone"></i><span>011 234 5678</span></div>
+        <div class="fc-item"><i class="fas fa-envelope"></i><span>hello@zendrive.lk</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 ZenDrive. All rights reserved.</div>
+      <a href="https://nexa3solutions.com" target="_blank" class="nexa3-badge"><span class="nx">N3</span><span>Design & Developed by <strong>Nexa3 Solutions</strong></span></a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/94771234567" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp" style="color:white; font-size:32px;"></i></a>
+
+<script src="script.js"></script>
+</body>
+</html>

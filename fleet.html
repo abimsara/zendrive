@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Fleet | ZenDrive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><div class="logo-mark"><i class="fas fa-gem"></i></div><div class="logo-text">ZenDrive<small>Premium Rentals</small></div></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fleet.html" class="active">Our Fleet</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:0112345678" class="header-phone"><i class="fas fa-phone"></i><span>011 234 5678</span></a>
+      <a href="booking.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Now</a>
+      <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-top">
+    <a href="index.html" class="logo" onclick="closeMobile()"><div class="logo-mark"><i class="fas fa-gem"></i></div><div class="logo-text">ZenDrive<small>Premium Rentals</small></div></a>
+    <button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button>
+  </div>
+  <nav class="mobile-nav">
+    <a href="index.html" onclick="closeMobile()">Home</a>
+    <a href="fleet.html" onclick="closeMobile()">Our Fleet</a>
+    <a href="about.html" onclick="closeMobile()">About Us</a>
+    <a href="contact.html" onclick="closeMobile()">Contact</a>
+  </nav>
+  <div class="mobile-contact">
+    <a href="tel:0112345678"><i class="fas fa-phone"></i> 011 234 5678</a>
+    <a href="https://wa.me/94771234567"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+  </div>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Explore Our Full Fleet</h1>
+    <p>Choose from our wide range of premium, fully-insured vehicles. Filter by category to find your perfect match.</p>
+  </div>
+</section>
+
+<section style="padding-top: 40px;">
+  <div class="container">
+    <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px;" id="fleetFilters">
+      <button class="btn btn-outline filter-btn active" data-filter="all" style="border-radius: 100px; padding: 10px 24px; font-weight: 600;">All Vehicles</button>
+      <button class="btn btn-outline filter-btn" data-filter="economy" style="border-radius: 100px; padding: 10px 24px; font-weight: 600;">Economy</button>
+      <button class="btn btn-outline filter-btn" data-filter="suv" style="border-radius: 100px; padding: 10px 24px; font-weight: 600;">SUV</button>
+      <button class="btn btn-outline filter-btn" data-filter="luxury" style="border-radius: 100px; padding: 10px 24px; font-weight: 600;">Luxury</button>
+      <button class="btn btn-outline filter-btn" data-filter="van" style="border-radius: 100px; padding: 10px 24px; font-weight: 600;">Van</button>
+    </div>
+
+    <div class="fleet-grid" id="fleetGrid">
+      
+      <div class="car-card reveal" data-cat="economy">
+        <div class="car-img"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600" alt="Toyota Aqua"><span class="car-tag economy">Economy</span></div>
+        <div class="car-body">
+          <h3 class="car-name">Toyota Aqua</h3><div class="car-type">Hybrid • Automatic • 2021</div>
+          <div class="car-specs"><div class="car-spec"><i class="fas fa-user-friends"></i> 5 Seats</div><div class="car-spec"><i class="fas fa-bolt"></i> Hybrid</div><div class="car-spec"><i class="fas fa-gas-pump"></i> 22 km/L</div></div>
+          <div class="car-foot"><div class="car-price">Rs 8,500 <span>/day</span></div><a href="booking.html?car=Toyota%20Aqua" class="car-book">Book <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="car-card reveal" data-cat="economy">
+        <div class="car-img"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600" alt="Honda Fit"><span class="car-tag economy">Economy</span></div>
+        <div class="car-body">
+          <h3 class="car-name">Honda Fit</h3><div class="car-type">Petrol • Automatic • 2020</div>
+          <div class="car-specs"><div class="car-spec"><i class="fas fa-user-friends"></i> 5 Seats</div><div class="car-spec"><i class="fas fa-gas-pump"></i> Petrol</div><div class="car-spec"><i class="fas fa-cog"></i> Auto</div></div>
+          <div class="car-foot"><div class="car-price">Rs 9,000 <span>/day</span></div><a href="booking.html?car=Honda%20Fit" class="car-book">Book <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="car-card reveal" data-cat="suv">
+        <div class="car-img"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600" alt="Toyota Harrier"><span class="car-tag suv">SUV</span></div>
+        <div class="car-body">
+          <h3 class="car-name">Toyota Harrier</h3><div class="car-type">Petrol • Automatic • 2021</div>
+          <div class="car-specs"><div class="car-spec"><i class="fas fa-user-friends"></i> 5 Seats</div><div class="car-spec"><i class="fas fa-gas-pump"></i> Petrol</div><div class="car-spec"><i class="fas fa-snowflake"></i> A/C</div></div>
+          <div class="car-foot"><div class="car-price">Rs 18,000 <span>/day</span></div><a href="booking.html?car=Toyota%20Harrier" class="car-book">Book <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="car-card reveal" data-cat="suv">
+        <div class="car-img"><img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=600" alt="Mitsubishi Outlander"><span class="car-tag suv">SUV</span></div>
+        <div class="car-body">
+          <h3 class="car-name">Mitsubishi Outlander</h3><div class="car-type">Petrol • Automatic • 2020</div>
+          <div class="car-specs"><div class="car-spec"><i class="fas fa-user-friends"></i> 7 Seats</div><div class="car-spec"><i class="fas fa-gas-pump"></i> Petrol</div><div class="car-spec"><i class="fas fa-snowflake"></i> A/C</div></div>
+          <div class="car-foot"><div class="car-price">Rs 20,000 <span>/day</span></div><a href="booking.html?car=Mitsubishi%20Outlander" class="car-book">Book <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="car-card reveal" data-cat="luxury">
+        <div class="car-img"><img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=600" alt="Mercedes C-Class"><span class="car-tag luxury">Luxury</span></div>
+        <div class="car-body">
+          <h3 class="car-name">Mercedes C-Class</h3><div class="car-type">Petrol • Automatic • 2022</div>
+          <div class="car-specs"><div class="car-spec"><i class="fas fa-user-friends"></i> 5 Seats</div><div class="car-spec"><i class="fas fa-gem"></i> Premium</div><div class="car-spec"><i class="fas fa-music"></i> Bose</div></div>
+          <div class="car-foot"><div class="car-price">Rs 35,000 <span>/day</span></div><a href="booking.html?car=Mercedes%20C-Class" class="car-book">Book <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="car-card reveal" data-cat="van">
+        <div class="car-img"><img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=600" alt="Toyota Hiace"><span class="car-tag van">Van</span></div>
+        <div class="car-body">
+          <h3 class="car-name">Toyota Hiace</h3><div class="car-type">Diesel • Manual • 2019</div>
+          <div class="car-specs"><div class="car-spec"><i class="fas fa-user-friends"></i> 12 Seats</div><div class="car-spec"><i class="fas fa-gas-pump"></i> Diesel</div><div class="car-spec"><i class="fas fa-snowflake"></i> A/C</div></div>
+          <div class="car-foot"><div class="car-price">Rs 22,000 <span>/day</span></div><a href="booking.html?car=Toyota%20Hiace" class="car-book">Book <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="car-card reveal" data-cat="suv">
+        <div class="car-img"><img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600" alt="Jeep Wrangler"><span class="car-tag suv">SUV</span></div>
+        <div class="car-body">
+          <h3 class="car-name">Jeep Wrangler</h3><div class="car-type">Petrol • Automatic • 2021</div>
+          <div class="car-specs"><div class="car-spec"><i class="fas fa-user-friends"></i> 4 Seats</div><div class="car-spec"><i class="fas fa-gas-pump"></i> Petrol</div><div class="car-spec"><i class="fas fa-cog"></i> Auto</div></div>
+          <div class="car-foot"><div class="car-price">Rs 28,000 <span>/day</span></div><a href="booking.html?car=Jeep%20Wrangler" class="car-book">Book <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="car-card reveal" data-cat="luxury">
+        <div class="car-img"><img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600" alt="BMW 5 Series"><span class="car-tag luxury">Luxury</span></div>
+        <div class="car-body">
+          <h3 class="car-name">BMW 5 Series</h3><div class="car-type">Petrol • Automatic • 2023</div>
+          <div class="car-specs"><div class="car-spec"><i class="fas fa-user-friends"></i> 5 Seats</div><div class="car-spec"><i class="fas fa-gas-pump"></i> Petrol</div><div class="car-spec"><i class="fas fa-cog"></i> Auto</div></div>
+          <div class="car-foot"><div class="car-price">Rs 40,000 <span>/day</span></div><a href="booking.html?car=BMW%205%20Series" class="car-book">Book <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="car-card reveal" data-cat="economy">
+        <div class="car-img"><img src="https://images.unsplash.com/photo-1541443131876-44b03de101c5?w=600" alt="Suzuki Wagon R"><span class="car-tag economy">Economy</span></div>
+        <div class="car-body">
+          <h3 class="car-name">Suzuki Wagon R</h3><div class="car-type">Petrol • Automatic • 2019</div>
+          <div class="car-specs"><div class="car-spec"><i class="fas fa-user-friends"></i> 4 Seats</div><div class="car-spec"><i class="fas fa-gas-pump"></i> Petrol</div><div class="car-spec"><i class="fas fa-cog"></i> Auto</div></div>
+          <div class="car-foot"><div class="car-price">Rs 7,500 <span>/day</span></div><a href="booking.html?car=Suzuki%20Wagon%20R" class="car-book">Book <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><div class="logo-mark"><i class="fas fa-gem"></i></div><div class="logo-text">ZenDrive<small>Premium Rentals</small></div></a>
+        <p>Colombo's most trusted premium car rental service.</p>
+        <div class="socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a></div>
+      </div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="fleet.html">Our Fleet</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Support</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+      <div class="footer-col footer-contact">
+        <h4>Get in Touch</h4>
+        <div class="fc-item"><i class="fas fa-map-marker-alt"></i><span>42, Independence Avenue, Colombo 07</span></div>
+        <div class="fc-item"><i class="fas fa-phone"></i><span>011 234 5678</span></div>
+        <div class="fc-item"><i class="fas fa-envelope"></i><span>hello@zendrive.lk</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 ZenDrive. All rights reserved.</div>
+      <a href="https://nexa3solutions.com" target="_blank" class="nexa3-badge"><span class="nx">N3</span><span>Design & Developed by <strong>Nexa3 Solutions</strong></span></a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/94771234567" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp" style="color:white; font-size:32px;"></i></a>
+<script src="script.js"></script>
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const carCards = document.querySelectorAll('.car-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => { b.classList.remove('active', 'btn-primary'); b.classList.add('btn-outline'); });
+      btn.classList.remove('btn-outline'); btn.classList.add('active', 'btn-primary');
+      const filter = btn.dataset.filter;
+      carCards.forEach(card => {
+        if (filter === 'all' || card.dataset.cat === filter) { card.style.display = 'flex'; } else { card.style.display = 'none'; }
+      });
+    });
+  });
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const typeParam = urlParams.get('type');
+  if (typeParam) {
+    const targetBtn = document.querySelector(`.filter-btn[data-filter="${typeParam}"]`);
+    if (targetBtn) { targetBtn.click(); }
+  }
+</script>
+</body>
+</html>
